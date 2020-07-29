@@ -2,8 +2,7 @@
 
 ## USAGE
 use pip3 install -r requirements.txt in order to install all the packages <br>
-to start use python3 train.py<br>
-or python3 pred.py<br>
+to start use python3 app.py<br>
 Use pip3 install any missing packages<br>
 
 # Train data
