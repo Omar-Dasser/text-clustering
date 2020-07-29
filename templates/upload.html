@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Upload Excel File</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    crossorigin="anonymous">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .container {
+      max-width: 960px;
+    }
+
+    .lh-condensed {
+      line-height: 1.25;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <div class="container">
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4"
+        src="https://www.google.co.ma/imgres?imgurl=http%3A%2F%2Fphotos.prnewswire.com%2Fprn%2F20090416%2FIBMLOGO&imgrefurl=https%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Fbank-of-china-in-the-uk-works-with-ibm-to-become-a-smarter-greener-bank-114573679.html&docid=7BZ86LAuLkwPnM&tbnid=nhtPB4HfkwbCxM%3A&vet=10ahUKEwjGr8n0msPiAhUFqXEKHdzADdMQMwhHKAgwCA..i&w=500&h=261&client=opera&bih=970&biw=1880&q=ibm%20smart%20bank&ved=0ahUKEwjGr8n0msPiAhUFqXEKHdzADdMQMwhHKAgwCA&iact=mrc&uact=8"
+        alt="" width="72" height="72">
+      <h2>Text Clustering</h2>
+      <p class="lead">
+        <h1>Upload new File required for your demand</h1>.
+      </p>
+    </div>
+
+
+    <div class="row h-100 justify-content-center align-items-center">
+      <form class="needs-validation" method=post enctype=multipart/form-data> <div class="input-group mb-3 center">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile01" name=cin_front required
+            aria-describedby="inputGroupFileAddon01">
+          <label class="custom-file-label" for="inputGroupFile01"> Excel file - Text Clustering</label>
+        </div>
+    </div>
+
+
+
+    <input class="btn btn-primary btn-lg btn-block" type=submit value=Upload>
+    </form>
+  </div>
+  <hr class="mb-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+       
+
+
+      
+
+        </div>
+      </div>
+  </div>
+  <hr class="mb-4">
+  {% autoescape false %}<!-- to allow execution of the html bags (m)-->
+  {% if passed %}
+  <h1 class="text-center">
+    <style>
+      table, th, td {
+        border: 5px solid blue;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+        text-align: center;    
+      }
+    </style>
+    <table style="width:100%">
+      <tr>
+        {%for i in range(len)%} 
+        <th>Article n# {{i+1}}</th>
+        {%endfor%} 
+      </tr>
+      <tr>
+        {%for i in range(len)%} 
+        <td>Cluster n# {{msg[i]}}</td>
+
+        {%endfor%} 
+
+      </tr>
+    </table></h1>
+  {% endif %}
+  {% endautoescape %}
+  
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 </p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+  </script>
+</body>
+
+</html>
